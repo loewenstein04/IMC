@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon"
+        href="https://img.freepik.com/vetores-premium/controle-de-peso-do-indice-de-massa-corporal-com-o-medidor-de-imc_664444-1.jpg?w=2000">
+    <title>IMC </title>
+</head>
+
+<body>
+
+    <main>
+        <img src="https://runnersworld.com.br/wp-content/uploads/sites/4/2019/02/usar-a-esteira-ao-treinar-para-uma-corrida-1280x720.jpg" alt="Imagem não carrgada" class="img1" id="img1">
+
+        <img src="https://conteudo.imguol.com.br/blogs/204/files/2018/03/iStock-478859478-1024x683.jpg" alt="Imagem não carregada" class="img2-0" id="img2">
+
+        <div class="main-texto">
+            <h2>Calculando seu IMC</h2>
+
+            <p>O IMC (Índice de Massa Corporal) é um cálculo universal adotado pela OMS (Organização Mundial da Saúde) para classificar padrões de saúde relacionados ao peso, como desnutrição e obesidade, principalmente em populações....</p>
+
+            <button id="active" onclick="active()">Calcule seu IMC</button>
+        </div>
+    </main>
+
+    <section class="IMC inactive empty" id="section">
+        <div id="fundo" class="fundo-blur" onclick="saindo()"></div>
+        <div class="calculo" id="fundo-calculo">
+            <div class="peso-texto">
+                <h1>Adicione seu peso em (Kg).</h1>
+
+                <input type="number" id="peso" placeholder="Ex: 70">
+
+                <p><span id="aviso-peso"></span></p>
+
+                <div class="btns">
+                    <button id="exit">Sair</button>
+                    <button id="next">Próximo</button>
+                </div>
+            </div>
+            <div class="margin-altura altura-texto" id="divAltura">
+                <h1>Adicione sua altura em (M).</h1>
+
+                <input type="number" id="altura" placeholder="Ex: 1.70">
+
+                <p><span id="aviso-altura"></span></p>
+
+                <div class="btns">
+                    <button id="voltar">Voltar</button>
+                    <button id="calcular" onclick="calcularImc()">Calcular</button>
+                </div>
+            </div>
+            <div class="move-result resultado" id="resp">
+                <h1>Seus Dados são</h1>
+
+                <p><strong>Aviso:</strong> Os dados aqui mostrados não podem ser alterados</p>
+
+                <div class="resultado-peso">
+
+                    <h3>Seu peso.</h3>
+
+                    <p id="display-peso" class="display"></p>
+                </div>
+
+                <div class="resultado-altura">
+
+                    <h3>Sua altura.</h3>
+
+                    <p id="display-altura" class="display"></p>
+                </div>
+
+                <div class="resultado-IMC">
+                    <h3>Seu Índice de Massa Corporal é:</h3>
+
+                    <p><span id="resultado"></span></p>
+                </div>
+
+                <button id="sair" onclick="sair()">Sair</button>
+            </div>
+            <!-- <h1>IMC</h1>
+            <label for="peso">Peso(kg): </label>
+            <input type="text" id="peso" name="peso">
+            <br>
+
+            <label for="altura">Altura(M): </label>
+            <input type="text" id="altura" name="altura">
+            <br>
+
+            <button onclick="calcularImc()"> Calcular </button>
+            <br>
+
+            <p>Seu índice de massa corporal é <span id="resultado"></span></p> -->
+        </div>
+
+    </section>
+
+    <footer class="main-footer">
+        <p>Copyright&copy; | IOS | André Loewenstein</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
